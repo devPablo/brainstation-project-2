@@ -1,0 +1,18 @@
+$breakpoints: (
+  'xsm': 360px,
+  'sm': 768px,
+  'md': 1024px,
+  'lg': 1200px,
+  'xl': 1400px,
+);
+
+// Font
+$root-font-size: 16px;
+$primary-font: 'Inter', sans-serif;
+$secondary-font: 'Fraunces', serif;
+
+// Colors
+$primary-preloader: #01c684;
+$secondary-preloader: #caffef;
+$primary-focus: #ececec;
+$secondary-focus: #2962ff;
