@@ -1,0 +1,42 @@
+@use './../abstracts/breakpoints' as media;
+
+.instagram-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  width: 100vw;
+
+  @include media.query('>=xsm') {
+    width: 95vw;
+    flex-direction: row;
+  }
+
+  @include media.query('>=lg') {
+    width: 82vw;
+  }
+
+  &__logo-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+
+    @include media.query('>=sm') {
+      margin: 0;
+    }
+  }
+
+  &__title {
+    color: $primary-font-color;
+    font-weight: 600;
+    margin-left: 1rem;
+  }
+
+  &__handle {
+    color: $primary-font-color;
+    font-weight: 400;
+
+  }
+}

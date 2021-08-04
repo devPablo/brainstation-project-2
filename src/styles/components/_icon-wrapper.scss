@@ -1,0 +1,20 @@
+.icon-wrapper {
+  background-color: #eee;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: rgb(231, 229, 229);
+  }
+
+  svg {
+    fill: $primary-font-color;
+    transform: scale(1.3);
+  }
+}

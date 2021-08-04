@@ -34,12 +34,6 @@ const InstagramCarousel = () => {
           ? 3
           : 2
       }
-
-      // 'xsm': 360px,
-      // 'sm': 768px,
-      // 'md': 1024px,
-      // 'lg': 1200px,
-      // 'xl': 1400px,
       className='instagram-carousel'
     >
       {instagramImages.map((img, index) => {
