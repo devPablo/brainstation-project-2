@@ -1,0 +1,107 @@
+@use './../abstracts/breakpoints' as media;
+
+.split-info {
+  display: flex;
+  flex-direction: column;
+
+  @include media.query('>=md') {
+    flex-direction: row;
+  }
+
+  &__section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+
+    @include media.query('>=md') {
+      width: 50%;
+      height: calc(100vh - 112.8px);
+    }
+  }
+
+  &__section--green {
+    background: rgb(186, 204, 201);
+    background: radial-gradient(
+      circle,
+      rgba(186, 204, 201, 1) 0%,
+      rgba(171, 187, 184, 1) 19%,
+      rgba(171, 187, 184, 1) 73%
+    );
+  }
+
+  &__content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 20rem;
+
+    @include media.query('>=sm') {
+      width: 22rem;
+    }
+
+    @include media.query('>=lg') {
+      width: 28rem;
+    }
+  }
+
+  &__subtitle {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+
+    @include media.query('>=sm') {
+      font-size: 0.9rem;
+    }
+
+    @include media.query('>=lg') {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__title {
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+
+    @include media.query('>=sm') {
+      font-size: 2rem;
+    }
+
+    @include media.query('>=lg') {
+      font-size: 2.5rem;
+    }
+  }
+
+  &__img {
+    height: 100%;
+
+    @include media.query('>=sm') {
+      width: 100%;
+    }
+
+    @include media.query('>=md') {
+      width: 220%;
+    }
+  }
+
+  &__trending {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    font-weight: 400;
+    font-size: 0.8rem;
+    letter-spacing: -0.01rem;
+    color: rgb(255, 255, 255);
+
+    @include media.query('>=sm') {
+      font-size: 1rem;
+    }
+  }
+}

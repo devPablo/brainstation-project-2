@@ -6,6 +6,11 @@
 @import './base/reset';
 
 // COMPONENTS
-@import './pages/not-found';
 @import './components/nav';
 @import './components/nav-menu';
+@import './components/split-info';
+@import './components/action-button';
+
+// PAGES
+@import './pages/not-found';
+@import './pages/home';

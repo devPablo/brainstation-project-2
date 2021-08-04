@@ -1,7 +1,9 @@
+import SplitInfo from '../components/SplitInfo';
+
 const Home = () => {
   return (
-    <div>
-      <h1>Home</h1>
+    <div className='home'>
+      <SplitInfo />
     </div>
   );
 };
