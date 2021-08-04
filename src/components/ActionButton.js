@@ -1,10 +1,12 @@
+import { Link } from 'react-router-dom';
+
 const ActionButton = props => {
-  const { type, content, clickHandler } = props;
+  const { type, content, clickHandler, toLink, classes, inverted } = props;
 
   return (
-    <button className='action-button' type={type} onClick={clickHandler}>
+    <Link className={`action-button ${classes} ${inverted  ? 'action-button--inverted' : 'action-button--default'}`} to={toLink} type={type} onClick={clickHandler}>
       {content}
-    </button>
+    </Link>
   );
 };
 

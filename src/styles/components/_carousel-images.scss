@@ -1,0 +1,49 @@
+@use './../abstracts/breakpoints' as media;
+
+.carousel-images {
+  &__slide {
+    // margin: 0 0.2rem;
+    // padding: 0 0.2rem;
+
+    @include media.query('>=sm') {
+      // margin: 0 2rem;
+      // width: 12rem !important;
+    }
+
+    @include media.query('>=md') {
+      // margin: 0 4rem;
+      // width: 23rem !important;
+    }
+  }
+
+  &__image-wrapper {
+    overflow: hidden;
+    border: 1px solid #eee;
+    // margin: 0.4rem;
+    // max-width: 300px;
+    // min-width: 100%;
+    transition: border 0.3s ease;
+
+    @include media.query('>=sm') {
+      // min-width: 120%;
+    }
+
+    @include media.query('>=md') {
+      // min-width: 120%;
+      // width: 160%;
+    }
+
+    &:hover {
+      border: 1px solid #101010;
+    }
+
+    &:hover .carousel-images__image {
+      transform: scale(1.2);
+    }
+  }
+
+  &__image {
+    width: 100%;
+    transition: transform 0.3s ease;
+  }
+}

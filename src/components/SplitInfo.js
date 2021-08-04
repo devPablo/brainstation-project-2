@@ -2,10 +2,6 @@ import KaptainBackground from './../assets/background/kaptain_desktop-1920x1080.
 import ActionButton from './ActionButton';
 
 const SplitInfo = () => {
-  const actionButtonHandler = () => {
-    console.log('Redirecting to products...');
-  };
-
   return (
     <div className='split-info'>
       <div className='split-info__section split-info__section--green'>
@@ -14,11 +10,7 @@ const SplitInfo = () => {
           <h2 className='split-info__title'>
             Proudly designed for everyday living
           </h2>
-          <ActionButton
-            type='button'
-            content='view products'
-            clickHandler={actionButtonHandler}
-          />
+          <ActionButton type='button' content='view products' toLink='/shop' />
         </div>
       </div>
       <div className='split-info__section'>
