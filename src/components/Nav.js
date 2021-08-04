@@ -14,7 +14,7 @@ const Nav = () => {
     <nav className='nav'>
       <ul className={`nav__list ${isMenuClosed ? '' : 'nav__list--open'}`}>
         <li className='nav__list-item'>
-          <Link className='nav__link' to='/shop' onClick={menuClosedHandler}>
+          <Link className='nav__link' to='/shop' onClick={!isMenuClosed ? menuClosedHandler: null}>
             Shop
           </Link>
         </li>
