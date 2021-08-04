@@ -1,8 +1,6 @@
-// Import Swiper React components
 import { useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-// Import Swiper styles
 import 'swiper/swiper.scss';
 
 const CarouselImages = props => {
@@ -20,7 +18,7 @@ const CarouselImages = props => {
 
   return (
     <Swiper
-    spaceBetween={25}
+      spaceBetween={25}
       slidesPerView={
         windowWidth >= 1024
           ? 3.2
