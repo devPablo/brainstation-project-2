@@ -1,0 +1,90 @@
+@use './../abstracts/breakpoints' as media;
+
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0.5rem;
+
+  @include media.query('>=sm') {
+    width: 32%;
+    margin: 0 auto;
+  }
+
+  &__content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  &__category {
+    color: #abadb0;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-size: 0.7rem;
+
+    @include media.query('>=xsm') {
+      font-size: 0.8rem;
+    }
+
+    @include media.query('>=md') {
+      font-size: 1rem;
+    }
+  }
+
+  &__common-color {
+    color: #2d333a;
+    font-size: 0.9rem;
+    font-weight: 300;
+    width: 100%;
+
+    margin: 0.3rem 0;
+
+    @include media.query('>=xsm') {
+      font-size: 1.1rem;
+    }
+
+    @include media.query('>=md') {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__price {
+    font-family: $secondary-font;
+    color: #2d333a;
+    font-size: 0.8rem;
+    letter-spacing: 0.1rem;
+
+    @include media.query('>=xsm') {
+      font-size: 0.95rem;
+    }
+
+    @include media.query('>=md') {
+      font-size: 1.1rem;
+    }
+  }
+
+  &__image-wrapper {
+    min-width: 150px;
+    max-width: 200px;
+
+    @include media.query('>=sm') {
+      min-width: 150px;
+      max-width: 300px;
+    }
+
+    @include media.query('>=sm') {
+      min-width: 150px;
+      max-width: 350px;
+    }
+  }
+
+  &__image {
+    width: 100%;
+  }
+}

@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "category": "kaptain",
+    "common": "chair",
+    "color": "pure white",
+    "price": 259,
+    "image": "kaptain/Kaptain_PureWhite_4205-777x777.png"
+  },
+  {
+    "id": 2,
+    "category": "kaptain",
+    "common": "chair",
+    "color": "natural tan",
+    "price": 259,
+    "image": "kaptain/Kaptain_Chair_-_NaturalTan_-_01-777x777.png"
+  },
+  {
+    "id": 3,
+    "category": "kaptain",
+    "common": "chair",
+    "color": "mysterious black",
+    "price": 259,
+    "image": "kaptain/Kaptain_Chair_-MysteriousBlack_-_01-777x777.png"
+  },
+  {
+    "id": 4,
+    "category": "kaptain",
+    "common": "chair",
+    "color": "modest gray",
+    "price": 259,
+    "image": "kaptain/Kaptain_Chair_-_ModestGrey_-_01-777x777.png"
+  },
+  {
+    "id": 5,
+    "category": "kube",
+    "common": "storage ottoman",
+    "color": "cheerful yellow",
+    "price": 65,
+    "image": "kube/Kube_CheerfulYellow_4065-777x777.png"
+  },
+  {
+    "id": 6,
+    "category": "kube",
+    "common": "storage ottoman",
+    "color": "passionate plum",
+    "price": 65,
+    "image": "kube/Kube_PassionatePlum_4072-777x777.png"
+  },
+  {
+    "id": 7,
+    "category": "kube",
+    "common": "storage ottoman",
+    "color": "impulsive red",
+    "price": 65,
+    "image": "kube/Kube_ImpulsiveRed_4054-777x777.png"
+  }
+]
