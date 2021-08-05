@@ -1,0 +1,150 @@
+@use './../abstracts/breakpoints' as media;
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 2rem 1rem;
+  z-index: 200;
+
+  @include media.query('>=sm') {
+    padding: 2rem 2rem;
+  }
+
+  @include media.query('>=lg') {
+    padding: 2rem 4rem;
+  }
+
+  &__sections-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__list {
+    display: none;
+    align-items: center;
+
+    @include media.query('>=sm') {
+      display: flex;
+    }
+
+    &--open {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      position: absolute;
+      background-color: #fff;
+      top: 6.4rem;
+      left: 0;
+      width: 100%;
+      z-index: 400;
+
+      .nav__list-item {
+        margin: 1rem 0;
+      }
+
+      .nav__link {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  &__list-item {
+    display: flex;
+    align-items: center;
+    margin-right: 1.25rem;
+
+    @include media.query('>=md') {
+      margin-right: 2.5rem;
+    }
+
+    @include media.query('>=lg') {
+      margin-right: 4rem;
+    }
+  }
+
+  &__link {
+    color: $primary-font-color;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    position: relative;
+    padding: 0.5rem;
+
+    &:after {
+      content: '';
+      display: block;
+      bottom: 0;
+      width: 0;
+      height: 3px;
+      left: 50%;
+      position: absolute;
+      background: $primary-font-color;
+      transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    }
+
+    &:hover:after {
+      width: 100%;
+      left: 0;
+    }
+  }
+
+  &__title {
+    font-size: 2rem;
+    color: $primary-font-color;
+    font-weight: 800;
+
+    @include media.query('>=sm') {
+      transform: translateX(-2rem);
+    }
+
+    @include media.query('>=md') {
+      transform: translateX(-3.35rem);
+    }
+
+    @include media.query('>=lg') {
+      transform: translateX(-6.5rem);
+      font-size: 2.5rem;
+    }
+  }
+
+  &__username {
+    display: none;
+    color: $primary-font-color;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+
+    @include media.query('>=sm') {
+      display: flex;
+    }
+  }
+
+  &__icon {
+    fill: $primary-font-color;
+    margin-left: 0.75rem;
+
+    @include media.query('>=lg') {
+      margin-left: 2rem;
+    }
+
+    &--bag {
+      font-size: 1.4rem;
+      cursor: pointer;
+
+      @include media.query('>=md') {
+        font-size: 1.5rem;
+      }
+    }
+
+    &--closedmenu {
+      font-size: 1.8rem;
+
+      @include media.query('>=sm') {
+        display: none;
+      }
+    }
+  }
+}

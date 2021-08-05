@@ -5,7 +5,10 @@
   font-family: $primary-font;
 }
 
-
+*::selection {
+  background-color: rgb(23, 77, 255);
+  color: #FFF;
+}
 
 html, body {
   font-size: $root-font-size;

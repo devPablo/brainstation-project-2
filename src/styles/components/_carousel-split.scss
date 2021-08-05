@@ -1,0 +1,93 @@
+@use './../abstracts/breakpoints' as media;
+
+.carousel-split {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+
+  @include media.query('>=sm') {
+    flex-direction: row;
+  }
+
+  &__section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    margin: 2rem 0;
+
+    &--first {
+      @include media.query('>=sm') {
+        width: 40% !important;
+      }
+    }
+
+    &--second {
+      @include media.query('>=sm') {
+        width: 60% !important;
+      }
+    }
+
+    @include media.query('>=sm') {
+      &:first-of-type {
+        width: 50%;
+      }
+
+      &:last-of-type {
+        width: 50%;
+      }
+    }
+  }
+
+  &__content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 24rem;
+    padding: 0.5rem;
+
+    @include media.query('>=sm') {
+      width: 26rem;
+    }
+
+    @include media.query('>=md') {
+      width: 30rem;
+    }
+  }
+
+  &__title {
+    font-family: $secondary-font;
+    color: $primary-font-color;
+    font-size: 1.9rem;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+
+    @include media.query('>=md') {
+      font-size: 2.1rem;
+    }
+  }
+
+  &__subtitle {
+    color: $primary-font-color;
+    color: $secondary-font-color;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.4rem;
+
+    @include media.query('>=md') {
+      font-size: 1rem;
+    }
+  }
+
+  &__action-button {
+    font-size: 0.7rem;
+
+    @include media.query('>=md') {
+      font-size: 0.8rem;
+    }
+  }
+}

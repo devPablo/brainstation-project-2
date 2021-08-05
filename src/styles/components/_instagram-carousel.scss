@@ -1,0 +1,26 @@
+@use './../abstracts/breakpoints' as media;
+
+.instagram-carousel {
+  max-width: 100vw;
+  height: 240px;
+  cursor: pointer;
+
+  @include media.query('>=sm') {
+    max-width: 90vw;
+  }
+
+  @include media.query('>=lg') {
+    max-width: 82vw;
+  }
+
+  &__image-wrapper {
+    &:hover .instagram-carousel__image {
+      transform: translateY(-25px);
+    }
+  }
+
+  &__image {
+    width: 100%;
+    transition: transform 0.3s ease;
+  }
+}
