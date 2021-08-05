@@ -1,0 +1,72 @@
+@use './../abstracts/breakpoints' as media;
+
+.footer-form {
+  width: 100%;
+
+  @include media.query('>=sm') {
+    width: 100%;
+  }
+
+  @include media.query('>=lg') {
+    display: flex;
+    // justify-content: space-between;
+    align-items: center;
+    width: 500px;
+  }
+
+  &__group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.2rem;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 1.2rem;
+    border: 1px solid #cbccce;
+    background-color: transparent;
+    color: rgba(203, 204, 206, 0.95);
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    outline: 0;
+    transition: all 0.3s ease;
+
+    @include media.query('>=lg') {
+      width: 300px;
+      margin: 0 2rem 0 0;
+    }
+
+    &:focus {
+      background-color: #fff;
+      color: $primary-font-color;
+    }
+
+    &::placeholder {
+      color: rgba(203, 204, 206, 0.95);
+      font-weight: 600;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      border-radius: 3px;
+    }
+  }
+
+  &__submit {
+    background-color: #6c7075;
+    padding: 1.2rem 1.8rem;
+    color: rgba(255, 255, 255, 0.95);
+    font-weight: 600;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    outline: 0;
+    border: none;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #292e34;
+    }
+  }
+}

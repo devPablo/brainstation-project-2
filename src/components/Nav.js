@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 const Nav = () => {
   const [isMenuClosed, setIsMenuClosed] = useState(true);
-  
+
   const menuClosedHandler = () => {
     setIsMenuClosed(!isMenuClosed);
     console.log(isMenuClosed);
@@ -14,7 +14,11 @@ const Nav = () => {
     <nav className='nav'>
       <ul className={`nav__list ${isMenuClosed ? '' : 'nav__list--open'}`}>
         <li className='nav__list-item'>
-          <Link className='nav__link' to='/shop' onClick={!isMenuClosed ? menuClosedHandler: null}>
+          <Link
+            className='nav__link'
+            to='/shop'
+            onClick={!isMenuClosed ? menuClosedHandler : null}
+          >
             Shop
           </Link>
         </li>
@@ -36,14 +40,17 @@ const Nav = () => {
       <div className='nav__sections-wrapper'>
         <p className='nav__username'>Pablo Bonilla</p>
         <BsBag className='nav__icon nav__icon--bag' />
-        {isMenuClosed ? <BsList
-          className='nav__icon nav__icon--closedmenu'
-          onClick={menuClosedHandler}
-        /> : <BsX
-        className='nav__icon nav__icon--closedmenu'
-        onClick={menuClosedHandler}
-      />}
-        
+        {isMenuClosed ? (
+          <BsList
+            className='nav__icon nav__icon--closedmenu'
+            onClick={menuClosedHandler}
+          />
+        ) : (
+          <BsX
+            className='nav__icon nav__icon--closedmenu'
+            onClick={menuClosedHandler}
+          />
+        )}
       </div>
     </nav>
   );
