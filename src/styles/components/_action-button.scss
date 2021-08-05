@@ -1,0 +1,46 @@
+@use './../abstracts/breakpoints' as media;
+
+.action-button {
+  text-transform: uppercase;
+  font-size: 0.6rem;
+  padding: 1rem;
+  font-weight: 600;
+  border: 0;
+  outline: 0;
+
+  cursor: pointer;
+  transition: color 0.3s ease, background-color 0.3s ease, border 0.3s ease;
+
+  &--default {
+    color: #fff;
+    background-color: #101010;
+    border: 1px solid transparent;
+
+    &:hover {
+      color: #101010;
+      background-color: transparent;
+      border: 1px solid #101010;
+    }
+  }
+
+  &--inverted {
+    color: #101010;
+    background-color: transparent;
+    border: 1px solid #101010;
+
+    &:hover {
+      color: #fff;
+      background-color: #101010;
+      border: 1px solid transparent;
+    }
+  }
+
+  @include media.query('>=sm') {
+    font-size: 0.7rem;
+  }
+
+  @include media.query('>=lg') {
+    font-size: 0.8rem;
+    padding: 1.2rem;
+  }
+}
