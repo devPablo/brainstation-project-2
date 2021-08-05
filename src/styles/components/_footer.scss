@@ -1,0 +1,86 @@
+@use './../abstracts/breakpoints' as media;
+
+.footer {
+  background-color: #1b1f23;
+  padding: 3rem 2rem;
+
+  @include media.query('>=md') {
+    padding: 6rem 6rem;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  @include media.query('>=lg') {
+    // padding: 6rem 12rem;
+  }
+
+  &__section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    @include media.query('>=sm') {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__navigation {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.75rem;
+
+    @include media.query('>=md') {
+      margin: 0 2rem;
+      width: 100px;
+    }
+
+    @include media.query('>=xl') {
+      margin: 0 2rem;
+      width: 200px;
+    }
+  }
+
+  &__title {
+    color: rgb(255, 255, 255, 0.9);
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+  }
+
+  &__link {
+    display: inline-block;
+    color: rgba(203, 204, 206, 0.95);
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    font-size: 0.8rem;
+    position: relative;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  &__subscription-form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__subscription-info {
+    color: rgba(203, 204, 206, 0.95);
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    font-size: 0.9rem;
+    line-height: 1.3rem;
+    max-width: 400px;
+  }
+
+  &__subscription-form-wrapper {
+    width: 100%;
+  }
+}
