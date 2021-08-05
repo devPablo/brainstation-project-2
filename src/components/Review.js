@@ -13,8 +13,10 @@ const Review = props => {
       <div className='review__section'>
         <div className='review__stars-wrapper'>
           {Array(5)
-            .fill(<BsStarFill className='review__star' />)
-            .map(star => star)}
+            .fill(0)
+            .map((star, index) => (
+              <BsStarFill key={index} className='review__star' />
+            ))}
         </div>
 
         <p className='review__content'>{content}</p>
