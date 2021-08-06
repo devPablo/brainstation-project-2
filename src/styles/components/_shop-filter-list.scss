@@ -1,0 +1,92 @@
+@use './../abstracts/breakpoints' as media;
+
+.filter-list {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 0;
+  position: relative;
+
+  @include media.query('>=sm') {
+    flex-direction: column;
+    margin-right: 3rem;
+  }
+
+  @include media.query('>=md') {
+    flex-direction: column;
+    margin-right: 1rem;
+  }
+
+  &::after {
+    display: none;
+    position: absolute;
+    content: '';
+    right: -2rem;
+    width: 1.5px;
+    height: 350px;
+    background-color: #e9e8e8;
+
+    @include media.query('>=sm') {
+      display: block;
+    }
+
+    @include media.query('>=md') {
+      right: -3rem;
+    }
+  }
+
+  &__group {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0.5rem 0;
+    cursor: pointer;
+
+    &:hover .filter-list__option-label {
+      color: #101010;
+    }
+  }
+
+  &__category {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__options {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-left: 0.8rem;
+
+    @include media.query('>=xsm') {
+      flex-direction: row;
+      margin-left: 0rem;
+    }
+
+    @include media.query('>=sm') {
+      flex-direction: column;
+      margin-left: 0.8rem;
+    }
+  }
+
+  &__title {
+    color: #2d333a;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+  }
+
+  &__option-input {
+    cursor: pointer;
+    margin: 0;
+  }
+
+  &__option-label {
+    color: #78818c;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: 0.9rem;
+    cursor: pointer;
+    padding-left: 1rem;
+    transition: color 0.3s ease;
+  }
+}

@@ -14,14 +14,14 @@ const Home = () => {
       <Review
         image={ReviewOne}
         content="I've used Boniv products for 4 years now, and from
-the very beginning I've loved it. There hasn't been one
-single momento I've had any second thoughts; top quality."
+                the very beginning I've loved it. There hasn't been one
+                single moment I had any second thoughts; top quality."
         author='Pablo'
       />
       <Review
         image={ReviewTwo}
-        content="Simply amazing. I've tried plenty of products throughout the years, and this
-        has changed the way I live entirely; couldn't ask for more."
+        content="It's simple, by far the worst products I've ever purchased in my entire life; 
+                had them thrown up in the garbage right away, no regrets."
         author='Carlos'
         invert='true'
       />

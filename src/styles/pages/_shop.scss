@@ -1,0 +1,19 @@
+@use './../abstracts/breakpoints' as media;
+
+.shop {
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  @include media.query('>=sm') {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 1rem;
+  }
+
+  @include media.query('>=lg') {
+    padding: 2rem 8rem;
+  }
+}

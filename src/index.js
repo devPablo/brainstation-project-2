@@ -5,15 +5,18 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import App from './components/App';
 import NotFound from './pages/NotFound';
+import ProductContextProvider from './store/ProductContext';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
-      <Switch>
-        <Route path='/404' component={NotFound} />
-        <Route component={App} />
-      </Switch>
-    </Router>
+    <ProductContextProvider>
+      <Router>
+        <Switch>
+          <Route path='/404' component={NotFound} />
+          <Route component={App} />
+        </Switch>
+      </Router>
+    </ProductContextProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
