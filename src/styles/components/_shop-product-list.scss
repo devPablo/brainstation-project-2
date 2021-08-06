@@ -2,11 +2,25 @@
 
 .shop-product-list {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  flex-direction: column;
+  width: 80%;
 
-  @include media.query('>=sm') {
-    justify-content: flex-start;
-    width: 80%;
+  &__products {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+
+    @include media.query('>=sm') {
+      justify-content: flex-start;
+      width: 100%;
+    }
+  }
+
+  &__pagination {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
   }
 }

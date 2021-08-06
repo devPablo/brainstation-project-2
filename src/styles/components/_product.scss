@@ -95,11 +95,6 @@
       min-width: 150px;
       max-width: 300px;
     }
-
-    @include media.query('>=md') {
-      min-width: 150px;
-      max-width: 350px;
-    }
   }
 
   &__image {

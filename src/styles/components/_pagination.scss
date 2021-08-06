@@ -1,0 +1,71 @@
+@use './../abstracts/breakpoints' as media;
+
+.pagination {
+  display: flex;
+  margin: 5rem 0;
+
+  &__page {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: 1px solid #101010;
+    margin: 0 0.5rem;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+
+    @include media.query('>=xsm') {
+      width: 40px;
+      height: 40px;
+      margin: 0 0.6rem;
+    }
+
+    @include media.query('>=sm') {
+      width: 45px;
+      height: 45px;
+      margin: 0 0.8rem;
+    }
+
+    @include media.query('>=md') {
+      width: 50px;
+      height: 50px;
+      margin: 0 1rem;
+    }
+
+    &:hover {
+      background-color: #101010;
+
+      & .pagination__content {
+        color: #fff;
+      }
+    }
+
+    &--active {
+      background-color: #101010;
+
+      & .pagination__content {
+        color: #fff;
+      }
+    }
+  }
+
+  &__content {
+    color: #101010;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+
+    @include media.query('>=xsm') {
+      font-size: 1rem;
+    }
+
+    @include media.query('>=sm') {
+      font-size: 1.1rem;
+    }
+
+    @include media.query('>=md') {
+      font-size: 1.2rem;
+    }
+  }
+}

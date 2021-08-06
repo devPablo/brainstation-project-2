@@ -1,4 +1,22 @@
-const ShopFilterList = () => {
+import { useState } from 'react';
+
+const ShopFilterList = props => {
+  const { updateCategories } = props;
+
+  const [categoriesToFilter, setCategoriesToFilter] = useState([]);
+
+  const filterHandler = category => {
+    const _categories = [...categoriesToFilter];
+    const _categoryIndex = _categories.findIndex(c => c === category);
+    if (_categoryIndex === -1) {
+      _categories.push(category);
+    } else {
+      _categories.splice(_categoryIndex, 1);
+    }
+    setCategoriesToFilter(_categories);
+    updateCategories(_categories);
+  };
+
   return (
     <div className='filter-list'>
       <div className='filter-list__category'>
@@ -12,6 +30,7 @@ const ShopFilterList = () => {
             id='js-boto'
             type='checkbox'
             className='filter-list__option-input'
+            onClick={() => filterHandler('boto')}
           />
           <label htmlFor='js-boto' className='filter-list__option-label'>
             Boto
@@ -22,6 +41,7 @@ const ShopFilterList = () => {
             id='js-kaptain'
             type='checkbox'
             className='filter-list__option-input'
+            onClick={() => filterHandler('kaptain')}
           />
           <label htmlFor='js-kaptain' className='filter-list__option-label'>
             Kaptain
@@ -32,6 +52,7 @@ const ShopFilterList = () => {
             id='js-kube'
             type='checkbox'
             className='filter-list__option-input'
+            onClick={() => filterHandler('kube')}
           />
           <label htmlFor='js-kube' className='filter-list__option-label'>
             Kube
@@ -42,6 +63,7 @@ const ShopFilterList = () => {
             id='js-nordik'
             type='checkbox'
             className='filter-list__option-input'
+            onClick={() => filterHandler('nordik')}
           />
           <label htmlFor='js-nordik' className='filter-list__option-label'>
             Nordik
@@ -52,6 +74,7 @@ const ShopFilterList = () => {
             id='js-pop'
             type='checkbox'
             className='filter-list__option-input'
+            onClick={() => filterHandler('pop')}
           />
           <label htmlFor='js-pop' className='filter-list__option-label'>
             Pop
@@ -62,6 +85,7 @@ const ShopFilterList = () => {
             id='js-rollo'
             type='checkbox'
             className='filter-list__option-input'
+            onClick={() => filterHandler('rollo')}
           />
           <label htmlFor='js-rollo' className='filter-list__option-label'>
             Rollo
