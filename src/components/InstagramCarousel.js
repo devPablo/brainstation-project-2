@@ -23,29 +23,31 @@ const InstagramCarousel = () => {
   }, [windowWidth]);
 
   return (
-    <Swiper
-      spaceBetween={4}
-      slidesPerView={
-        windowWidth >= 1024
-          ? 6
-          : windowWidth >= 768
-          ? 4
-          : windowWidth >= 360
-          ? 3
-          : 2
-      }
-      className='instagram-carousel'
-    >
-      {instagramImages.map((img, index) => {
-        return (
-          <SwiperSlide key={index} className='instagram-carousel__slide'>
-            <div className='instagram-carousel__image-wrapper'>
-              <img src={img} className='instagram-carousel__image' />
-            </div>
-          </SwiperSlide>
-        );
-      })}
-    </Swiper>
+    instagramImages.length > 0 && (
+      <Swiper
+        spaceBetween={4}
+        slidesPerView={
+          windowWidth >= 1024
+            ? 6
+            : windowWidth >= 768
+            ? 4
+            : windowWidth >= 360
+            ? 3
+            : 2
+        }
+        className='instagram-carousel'
+      >
+        {instagramImages.map((img, index) => {
+          return (
+            <SwiperSlide key={index} className='instagram-carousel__slide'>
+              <div className='instagram-carousel__image-wrapper'>
+                <img src={img} className='instagram-carousel__image' />
+              </div>
+            </SwiperSlide>
+          );
+        })}
+      </Swiper>
+    )
   );
 };
 export default InstagramCarousel;

@@ -14,17 +14,17 @@ const Nav = () => {
     <nav className='nav'>
       <ul className={`nav__list ${isMenuClosed ? '' : 'nav__list--open'}`}>
         <li className='nav__list-item'>
+          <Link className='nav__link' to='/home' onClick={menuClosedHandler}>
+            Home
+          </Link>
+        </li> 
+        <li className='nav__list-item'>
           <Link
             className='nav__link'
             to='/shop'
             onClick={!isMenuClosed ? menuClosedHandler : null}
           >
             Shop
-          </Link>
-        </li>
-        <li className='nav__list-item'>
-          <Link className='nav__link' to='/about' onClick={menuClosedHandler}>
-            About
           </Link>
         </li>
         <li className='nav__list-item'>

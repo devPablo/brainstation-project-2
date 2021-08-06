@@ -7,9 +7,9 @@ const SplitInfo = () => {
       <div className='split-info__section split-info__section--green'>
         <div className='split-info__content-wrapper'>
           <span className='split-info__subtitle'>our products</span>
-          <h2 className='split-info__title'>
+          <h1 className='split-info__title'>
             Proudly designed for everyday living
-          </h2>
+          </h1>
           <ActionButton type='button' content='view products' toLink='/shop' />
         </div>
       </div>
