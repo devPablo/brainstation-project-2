@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "id": "c732ca6d-0e09-4e4b-af75-abcff770f99c",
     "category": "kaptain",
     "common": "chair",
     "color": "pure white",
@@ -8,7 +8,7 @@
     "image": "kaptain/Kaptain_PureWhite_4205-777x777.png"
   },
   {
-    "id": 2,
+    "id": "281d0e60-08f9-4690-b32d-ab1f8ad679c4",
     "category": "kaptain",
     "common": "chair",
     "color": "natural tan",
@@ -16,7 +16,7 @@
     "image": "kaptain/Kaptain_Chair_-_NaturalTan_-_01-777x777.png"
   },
   {
-    "id": 3,
+    "id": "b15adc2b-92dc-4da3-8298-fe577eda163f",
     "category": "kaptain",
     "common": "chair",
     "color": "mysterious black",
@@ -24,7 +24,7 @@
     "image": "kaptain/Kaptain_Chair_-MysteriousBlack_-_01-777x777.png"
   },
   {
-    "id": 4,
+    "id": "85e2b893-1034-42e2-9e70-47c76c0e4af8",
     "category": "kaptain",
     "common": "chair",
     "color": "modest gray",
@@ -32,7 +32,7 @@
     "image": "kaptain/Kaptain_Chair_-_ModestGrey_-_01-777x777.png"
   },
   {
-    "id": 5,
+    "id": "4f44390e-2e7a-40c2-9c98-14d5fc974ebd",
     "category": "kube",
     "common": "storage ottoman",
     "color": "cheerful yellow",
@@ -40,7 +40,7 @@
     "image": "kube/Kube_CheerfulYellow_4065-777x777.png"
   },
   {
-    "id": 6,
+    "id": "03cc2c95-e7b4-426c-ab5a-011bbb22413d",
     "category": "kube",
     "common": "storage ottoman",
     "color": "passionate plum",
@@ -48,7 +48,7 @@
     "image": "kube/Kube_PassionatePlum_4072-777x777.png"
   },
   {
-    "id": 7,
+    "id": "bda9060d-d41a-4a3f-aefe-a039c1a4deb1",
     "category": "kube",
     "common": "storage ottoman",
     "color": "impulsive red",

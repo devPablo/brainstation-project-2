@@ -6,6 +6,14 @@
   justify-content: flex-start;
   align-items: center;
   margin: 0.5rem;
+  cursor: pointer;
+
+  &:hover &__category {
+    color: #101010;
+  }
+  &:hover &__image-wrapper {
+    transform: scale(1.09);
+  }
 
   @include media.query('>=sm') {
     width: 32%;
@@ -17,8 +25,16 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 100%;
+    max-width: 200px;
     text-align: center;
+
+    @include media.query('>=sm') {
+      max-width: 300px;
+    }
+
+    @include media.query('>=md') {
+      max-width: 350px;
+    }
   }
 
   &__category {
@@ -27,6 +43,7 @@
     text-transform: uppercase;
     letter-spacing: 0.1rem;
     font-size: 0.7rem;
+    transition: color 0.3s ease;
 
     @include media.query('>=xsm') {
       font-size: 0.8rem;
@@ -42,7 +59,6 @@
     font-size: 0.9rem;
     font-weight: 300;
     width: 100%;
-
     margin: 0.3rem 0;
 
     @include media.query('>=xsm') {
@@ -72,13 +88,15 @@
   &__image-wrapper {
     min-width: 150px;
     max-width: 200px;
+    z-index: -1;
+    transition: transform 0.3s ease;
 
     @include media.query('>=sm') {
       min-width: 150px;
       max-width: 300px;
     }
 
-    @include media.query('>=sm') {
+    @include media.query('>=md') {
       min-width: 150px;
       max-width: 350px;
     }

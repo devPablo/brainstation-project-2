@@ -12,4 +12,8 @@
     justify-content: center;
     padding: 1rem;
   }
+
+  @include media.query('>=lg') {
+    padding: 2rem 8rem;
+  }
 }
