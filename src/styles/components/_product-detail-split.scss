@@ -3,6 +3,7 @@
 .product-detail-split {
   display: flex;
   flex-direction: column;
+  margin: 1rem 0;
 
   @include media.query('>=sm') {
     flex-direction: row;
@@ -57,8 +58,12 @@
       font-size: 0.8rem;
     }
 
-    @include media.query('>=md') {
+    @include media.query('>=sm') {
       font-size: 1rem;
+    }
+
+    @include media.query('>=md') {
+      font-size: 1.25rem;
     }
   }
 
@@ -74,8 +79,12 @@
       font-size: 1.1rem;
     }
 
+    @include media.query('>=sm') {
+      font-size: 1.8rem;
+    }
+
     @include media.query('>=md') {
-      font-size: 1.2rem;
+      font-size: 2.25rem;
     }
   }
 
@@ -89,6 +98,10 @@
       font-size: 0.95rem;
     }
 
+    @include media.query('>=sm') {
+      font-size: 1rem;
+    }
+
     @include media.query('>=md') {
       font-size: 1.1rem;
     }
@@ -96,17 +109,54 @@
 
   &__description {
     font-family: $primary-font;
-    color: #6D7074;
+    color: #6d7074;
     font-size: 0.8rem;
-    margin-top: 2rem;
+    margin: 2rem 0;
     line-height: 1.3rem;
+    max-width: 100%;
 
     @include media.query('>=xsm') {
       font-size: 0.95rem;
+      max-width: 90%;
     }
 
     @include media.query('>=md') {
       font-size: 1.1rem;
+      max-width: 60%;
+    }
+  }
+
+  &__btn-add {
+    text-align: center;
+    font-size: 0.7rem;
+    max-width: 100%;
+
+    @include media.query('>=xsm') {
+      font-size: 0.95rem;
+      max-width: 90%;
+    }
+
+    @include media.query('>=sm') {
+      max-width: 60%;
+    }
+
+    @include media.query('>=md') {
+      width: 40%;
+    }
+
+    @include media.query('>=lg') {
+      width: 30%;
+    }
+  }
+
+  &__action-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    @include media.query('>=md') {
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+      align-items: center;
     }
   }
 }

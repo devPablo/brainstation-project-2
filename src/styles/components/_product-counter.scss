@@ -1,0 +1,41 @@
+@use './../abstracts/breakpoints' as media;
+
+.product-counter {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+
+  @include media.query('>=md') {
+    margin: 0 0 0 3rem;
+  }
+
+  &__counter-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 0 1rem;
+    width: 10px;
+
+    @include media.query('>=xsm') {
+      width: 30px;
+    }
+
+    @include media.query('>=sm') {
+      width: 50px;
+    }
+  }
+
+  &__counter {
+    font-weight: 500;
+    font-size: 1rem;
+    color: #101010;
+
+    &::selection {
+      background-color: transparent;
+      color: #101010;
+    }
+
+    @include media.query('>=xsm') {
+      font-size: 1.5rem;
+    }
+  }
+}

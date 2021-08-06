@@ -1,5 +1,13 @@
+import ProductCounter from './ProductCounter';
+
+const { default: ActionButtonEvent } = require('./ActionButtonEvent');
+
 const ProductDetailSplit = props => {
   const { product } = props;
+
+  const addToCart = () => {
+    console.log(`${product.id} added to cart`);
+  };
 
   return (
     <div className='product-detail-split'>
@@ -16,7 +24,19 @@ const ProductDetailSplit = props => {
             {product.common} • {product.color}
           </p>
           <p className='product-detail-split__price'>${product.price}</p>
-          <p className='product-detail-split__description'>{product.description}</p>
+          <p className='product-detail-split__description'>
+            {product.description}
+          </p>
+          <div className='product-detail-split__action-wrapper'>
+            <ProductCounter />
+            <ActionButtonEvent
+              type='button'
+              content='add to cart'
+              toLink='/shop'
+              clickHandler={addToCart}
+              classes='product-detail-split__btn-add'
+            />
+          </div>
         </div>
       </div>
     </div>
