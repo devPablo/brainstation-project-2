@@ -1,44 +1,48 @@
 @use './../abstracts/breakpoints' as media;
 
-.product {
+.product-detail-split {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  margin: 0.5rem;
-  cursor: pointer;
-
-  &:hover &__category {
-    color: #101010;
-  }
-  &:hover &__image-wrapper {
-    transform: scale(1.09);
-  }
 
   @include media.query('>=sm') {
-    width: 32%;
-    margin: 0 auto;
+    flex-direction: row;
+  }
+
+  &__section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+
+    @include media.query('>=md') {
+      width: 50%;
+      height: calc(100vh - 112.8px);
+    }
+  }
+
+  &__img {
+    max-width: 100%;
+
+    @include media.query('>=xsm') {
+      max-width: 75%;
+    }
+
+    @include media.query('>=md') {
+      max-width: 95%;
+    }
+
+    @include media.query('>=md') {
+      max-width: 90%;
+    }
   }
 
   &__content-wrapper {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    max-width: 400px;
-    text-align: center;
-
-    @include media.query('>=xsm') {
-      max-width: 200px;
-    }
-
-    @include media.query('>=sm') {
-      max-width: 300px;
-    }
-
-    @include media.query('>=md') {
-      max-width: 350px;
-    }
+    margin: 1rem;
+    width: 100%;
   }
 
   &__category {
@@ -46,7 +50,7 @@
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     transition: color 0.3s ease;
 
     @include media.query('>=xsm') {
@@ -59,11 +63,12 @@
   }
 
   &__common-color {
-    color: #2d333a;
-    font-size: 0.9rem;
+    font-family: $secondary-font;
+    color: #101010;
+    font-size: 1.5rem;
     font-weight: 300;
     width: 100%;
-    margin: 0.3rem 0;
+    margin: 0.5rem 0;
 
     @include media.query('>=xsm') {
       font-size: 1.1rem;
@@ -77,7 +82,7 @@
   &__price {
     font-family: $secondary-font;
     color: #2d333a;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     letter-spacing: 0.1rem;
 
     @include media.query('>=xsm') {
@@ -89,28 +94,19 @@
     }
   }
 
-  &__image-wrapper {
-    min-width: 150px;
-    max-width: 200px;
-    z-index: -1;
-    transition: transform 0.3s ease;
+  &__description {
+    font-family: $primary-font;
+    color: #6D7074;
+    font-size: 0.8rem;
+    margin-top: 2rem;
+    line-height: 1.3rem;
 
-    @include media.query('>=sm') {
-      min-width: 150px;
-      max-width: 300px;
+    @include media.query('>=xsm') {
+      font-size: 0.95rem;
     }
-  }
 
-  &__image {
-    width: 100%;
-    height: 200px;
-    
-    @include media.query(">=sm") {
-      min-height: 200px;
-    }
-    
-    @include media.query(">=md") {
-      height: 300px;
+    @include media.query('>=md') {
+      font-size: 1.1rem;
     }
   }
 }

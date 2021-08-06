@@ -45,7 +45,8 @@
     "common": "chair",
     "color": "modest gray",
     "price": 259,
-    "image": "kaptain/Kaptain_Chair_-_ModestGrey_-_01-777x777.png"
+    "image": "kaptain/Kaptain_Chair_-_ModestGrey_-_01-777x777.png",
+    "description": "A fresh, modern take on the traditional captain chair, Kaptain is a versatile piece suited to both living and dining spaces."
   },
   {
     "id": "281d0e60-08f9-4690-b32d-ab1f8ad679c4",

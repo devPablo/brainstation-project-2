@@ -13,7 +13,7 @@
 
   @include media.query('>=md') {
     flex-direction: column;
-    margin-right: 1rem;
+    margin-right: 3rem;
   }
 
   &::after {
@@ -30,6 +30,10 @@
     }
 
     @include media.query('>=md') {
+      right: -1rem;
+    }
+
+    @include media.query('>=lg') {
       right: -3rem;
     }
   }
