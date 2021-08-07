@@ -1,5 +1,8 @@
 import { useContext, useEffect } from 'react';
 import { CartContext } from '../store/CartContext';
+import CartBody from './CartBody';
+import CartFooter from './CartFooter';
+import CartHeader from './CartHeader';
 
 const CartModal = () => {
   const { showCart, setShowCart } = useContext(CartContext);
@@ -23,7 +26,9 @@ const CartModal = () => {
     <>
       <div id='js-cart-modal-overlay' className='cart-modal-overlay'></div>
       <div className='cart-modal'>
-        <p>Cart Modal</p>
+        <CartHeader />
+        <CartBody />
+        <CartFooter />
       </div>
     </>
   );

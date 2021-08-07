@@ -1,0 +1,9 @@
+@use './../abstracts/breakpoints' as media;
+
+.cart-body {
+  padding: 1rem;
+
+  @include media.query('>=lg') {
+    padding: 1rem 3rem;
+  }
+}
