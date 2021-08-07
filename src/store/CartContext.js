@@ -4,12 +4,15 @@ const defaultData = {
   cart: [],
   setCart: () => {},
   addItem: () => {},
+  showCart: false,
+  setShowCart: () => {},
 };
 
 export const CartContext = createContext(defaultData);
 
 const CartContextProvider = ({ children }) => {
   const [cart, setCart] = useState(defaultData.cart);
+  const [showCart, setShowCart] = useState(defaultData.showCart);
 
   // Cart e.g.
   // [{ product: {}, amount: 5 }];
@@ -25,7 +28,9 @@ const CartContextProvider = ({ children }) => {
   };
 
   return (
-    <CartContext.Provider value={{ cart, setCart, addItem, removeItem }}>
+    <CartContext.Provider
+      value={{ cart, setCart, addItem, removeItem, showCart, setShowCart }}
+    >
       {children}
     </CartContext.Provider>
   );

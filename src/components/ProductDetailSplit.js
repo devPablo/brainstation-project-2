@@ -6,12 +6,13 @@ import ActionButtonEvent from './../components/ActionButtonEvent';
 
 const ProductDetailSplit = props => {
   const { product } = props;
-  const { cart, addItem } = useContext(CartContext);
+  const { cart, addItem, setShowCart } = useContext(CartContext);
   const [itemAmount, setItemAmount] = useState(1);
 
   const addToCart = () => {
     const _item = { product, amount: itemAmount };
     addItem(_item);
+    setShowCart(true);
   };
 
   const productCounterHandler = counter => {
