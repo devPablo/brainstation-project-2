@@ -1,12 +1,21 @@
+import { useContext, useState } from 'react';
+import { CartContext } from '../store/CartContext';
 import ProductCounter from './ProductCounter';
 
-const { default: ActionButtonEvent } = require('./ActionButtonEvent');
+import ActionButtonEvent from './../components/ActionButtonEvent';
 
 const ProductDetailSplit = props => {
   const { product } = props;
+  const { cart, addItem } = useContext(CartContext);
+  const [itemAmount, setItemAmount] = useState(1);
 
   const addToCart = () => {
-    console.log(`${product.id} added to cart`);
+    const _item = { product, amount: itemAmount };
+    addItem(_item);
+  };
+
+  const productCounterHandler = counter => {
+    setItemAmount(counter);
   };
 
   return (
@@ -28,11 +37,10 @@ const ProductDetailSplit = props => {
             {product.description}
           </p>
           <div className='product-detail-split__action-wrapper'>
-            <ProductCounter />
+            <ProductCounter onUpdate={productCounterHandler} />
             <ActionButtonEvent
               type='button'
               content='add to cart'
-              toLink='/shop'
               clickHandler={addToCart}
               classes='product-detail-split__btn-add'
             />
