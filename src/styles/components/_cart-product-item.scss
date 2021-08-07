@@ -18,10 +18,6 @@
     @include media.query('>=sm') {
       margin: 1rem;
     }
-
-    @include media.query('>=md') {
-      margin: 2rem;
-    }
   }
 
   &__image {
