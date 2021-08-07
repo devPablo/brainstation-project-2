@@ -7,7 +7,6 @@ const Nav = () => {
 
   const menuClosedHandler = () => {
     setIsMenuClosed(!isMenuClosed);
-    console.log(isMenuClosed);
   };
 
   return (

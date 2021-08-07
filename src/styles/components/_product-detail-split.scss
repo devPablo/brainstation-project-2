@@ -1,0 +1,162 @@
+@use './../abstracts/breakpoints' as media;
+
+.product-detail-split {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+
+  @include media.query('>=sm') {
+    flex-direction: row;
+  }
+
+  &__section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+
+    @include media.query('>=md') {
+      width: 50%;
+      height: calc(100vh - 112.8px);
+    }
+  }
+
+  &__img {
+    max-width: 100%;
+
+    @include media.query('>=xsm') {
+      max-width: 75%;
+    }
+
+    @include media.query('>=md') {
+      max-width: 95%;
+    }
+
+    @include media.query('>=md') {
+      max-width: 90%;
+    }
+  }
+
+  &__content-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    width: 100%;
+  }
+
+  &__category {
+    color: #abadb0;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-size: 0.8rem;
+    transition: color 0.3s ease;
+
+    @include media.query('>=xsm') {
+      font-size: 0.8rem;
+    }
+
+    @include media.query('>=sm') {
+      font-size: 1rem;
+    }
+
+    @include media.query('>=md') {
+      font-size: 1.25rem;
+    }
+  }
+
+  &__common-color {
+    font-family: $secondary-font;
+    color: #101010;
+    font-size: 1.5rem;
+    font-weight: 300;
+    width: 100%;
+    margin: 0.5rem 0;
+
+    @include media.query('>=xsm') {
+      font-size: 1.1rem;
+    }
+
+    @include media.query('>=sm') {
+      font-size: 1.8rem;
+    }
+
+    @include media.query('>=md') {
+      font-size: 2.25rem;
+    }
+  }
+
+  &__price {
+    font-family: $secondary-font;
+    color: #2d333a;
+    font-size: 0.9rem;
+    letter-spacing: 0.1rem;
+
+    @include media.query('>=xsm') {
+      font-size: 0.95rem;
+    }
+
+    @include media.query('>=sm') {
+      font-size: 1rem;
+    }
+
+    @include media.query('>=md') {
+      font-size: 1.1rem;
+    }
+  }
+
+  &__description {
+    font-family: $primary-font;
+    color: #6d7074;
+    font-size: 0.8rem;
+    margin: 2rem 0;
+    line-height: 1.3rem;
+    max-width: 100%;
+
+    @include media.query('>=xsm') {
+      font-size: 0.95rem;
+      max-width: 90%;
+    }
+
+    @include media.query('>=md') {
+      font-size: 1.1rem;
+      max-width: 60%;
+    }
+  }
+
+  &__btn-add {
+    text-align: center;
+    font-size: 0.7rem;
+    max-width: 100%;
+
+    @include media.query('>=xsm') {
+      font-size: 0.95rem;
+      max-width: 90%;
+    }
+
+    @include media.query('>=sm') {
+      max-width: 60%;
+    }
+
+    @include media.query('>=md') {
+      width: 40%;
+    }
+
+    @include media.query('>=lg') {
+      width: 30%;
+    }
+  }
+
+  &__action-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    @include media.query('>=md') {
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+      align-items: center;
+    }
+  }
+}
