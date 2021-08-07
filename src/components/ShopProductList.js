@@ -22,7 +22,6 @@ const ShopProductList = props => {
     let currentProductsFiltered = products.filter(_p =>
       categoriesToFilter.includes(_p.category)
     );
-    console.log(currentProductsFiltered);
     currentProducts = currentProductsFiltered.slice(
       indexFirstProduct,
       indexLastProduct

@@ -5,7 +5,6 @@ const Pagination = props => {
   const history = useHistory();
 
   const paginationHandler = page => {
-    console.log(page);
     history.push('?page=' + page);
   };
 

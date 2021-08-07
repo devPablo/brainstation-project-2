@@ -25,8 +25,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 200px;
+    max-width: 400px;
     text-align: center;
+
+    @include media.query('>=xsm') {
+      max-width: 200px;
+    }
 
     @include media.query('>=sm') {
       max-width: 300px;
@@ -99,5 +103,14 @@
 
   &__image {
     width: 100%;
+    height: 200px;
+    
+    @include media.query(">=sm") {
+      min-height: 200px;
+    }
+    
+    @include media.query(">=md") {
+      height: 300px;
+    }
   }
 }

@@ -1,0 +1,39 @@
+@use './../abstracts/breakpoints' as media;
+
+.icon-wrapper-event {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+
+  @include media.query('>=sm') {
+    width: 50px;
+    height: 50px;
+  }
+
+  &:hover::after {
+    transform: scale(1.2);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #eee;
+    border-radius: 50%;
+    z-index: -1;
+    transition: transform 0.3s ease;
+  }
+
+  svg {
+    fill: $primary-font-color;
+    transform: scale(1.3);
+  }
+}
