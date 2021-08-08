@@ -1,0 +1,70 @@
+@use './../abstracts/breakpoints' as media;
+
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  margin-bottom: 3rem;
+  border-bottom: 1px solid #EEE;
+
+  @include media.query('>=lg') {
+    padding: 1rem 3rem;
+  }
+
+  &__title {
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  &__icon-bag {
+    display: none;
+    fill: #101010;
+
+    @include media.query('>=sm') {
+      display: flex;
+      font-size: 0.8rem;
+    }
+
+    @include media.query('>=sm') {
+      font-size: 1.3rem;
+    }
+
+    @include media.query('>=md') {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__icon-x {
+    transform: scale(0.8);
+
+    @include media.query('>=xsm') {
+      transform: scale(1);
+    }
+
+    @include media.query('>=sm') {
+      transform: scale(0.8);
+    }
+
+    @include media.query('>=md') {
+      transform: scale(1);
+    }
+
+    & svg {
+      transform: scale(2.4);
+
+      @include media.query('>=xsm') {
+        transform: scale(2.6);
+      }
+
+      @include media.query('>=sm') {
+        transform: scale(2);
+      }
+
+      @include media.query('>=md') {
+        transform: scale(2.2);
+      }
+    }
+  }
+}
