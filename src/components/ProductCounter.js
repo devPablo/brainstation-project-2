@@ -1,9 +1,15 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { AiOutlinePlus, AiOutlineMinus } from 'react-icons/ai';
 import IconWrapperEvent from './IconWrapperEvent';
 
-const ProductCounter = () => {
+const ProductCounter = props => {
+  const { onUpdate } = props;
+
   const [productCounter, setProductCounter] = useState(1);
+
+  useEffect(() => {
+    onUpdate(productCounter);
+  }, [productCounter]);
 
   const counterHandler = type => {
     if (type === 'increment') {

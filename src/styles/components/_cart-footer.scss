@@ -1,0 +1,31 @@
+@use './../abstracts/breakpoints' as media;
+
+.cart-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  margin: 1rem 0;
+  left: 0;
+  right: 0;
+
+  @include media.query('>=lg') {
+  }
+
+  &__checkout {
+    text-align: center;
+    width: 80%;
+
+    @include media.query('>=xsm') {
+      width: 60%;
+    }
+
+    @include media.query('>=sm') {
+      width: 50%;
+    }
+
+    @include media.query('>=md') {
+      width: 60%;
+    }
+  }
+}

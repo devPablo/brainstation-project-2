@@ -1,9 +1,16 @@
 import { Link } from 'react-router-dom';
 import { BsBag, BsList, BsX } from 'react-icons/bs';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import { CartContext } from '../store/CartContext';
 
 const Nav = () => {
   const [isMenuClosed, setIsMenuClosed] = useState(true);
+
+  const { setShowCart } = useContext(CartContext);
+
+  const openCart = () => {
+    setShowCart(true);
+  };
 
   const menuClosedHandler = () => {
     setIsMenuClosed(!isMenuClosed);
@@ -16,7 +23,7 @@ const Nav = () => {
           <Link className='nav__link' to='/home' onClick={menuClosedHandler}>
             Home
           </Link>
-        </li> 
+        </li>
         <li className='nav__list-item'>
           <Link
             className='nav__link'
@@ -38,7 +45,7 @@ const Nav = () => {
       </div>
       <div className='nav__sections-wrapper'>
         <p className='nav__username'>Pablo Bonilla</p>
-        <BsBag className='nav__icon nav__icon--bag' />
+        <BsBag className='nav__icon nav__icon--bag' onClick={openCart} />
         {isMenuClosed ? (
           <BsList
             className='nav__icon nav__icon--closedmenu'
