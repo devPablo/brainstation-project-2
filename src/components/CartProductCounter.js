@@ -15,23 +15,25 @@ const CartProductCounter = props => {
     if (type === 'increment') {
       setProductCounter(_prev => _prev + 1);
     } else if (type === 'decrement') {
-      if (productCounter <= 1) {
-        setProductCounter(1);
-      } else {
-        setProductCounter(_prev => _prev - 1);
-      }
+      setProductCounter(_prev => _prev - 1);
     }
   };
 
   return (
     <div className='cart-product-counter'>
-      <IconWrapperEvent clickHandler={() => counterHandler('decrement')} classes='cart-product-counter__icon'>
+      <IconWrapperEvent
+        clickHandler={() => counterHandler('decrement')}
+        classes='cart-product-counter__icon'
+      >
         <AiOutlineMinus />
       </IconWrapperEvent>
       <div className='cart-product-counter__counter-wrapper'>
         <p className='cart-product-counter__counter'>{productCounter}</p>
       </div>
-      <IconWrapperEvent clickHandler={() => counterHandler('increment')} classes='cart-product-counter__icon'>
+      <IconWrapperEvent
+        clickHandler={() => counterHandler('increment')}
+        classes='cart-product-counter__icon'
+      >
         <AiOutlinePlus />
       </IconWrapperEvent>
     </div>

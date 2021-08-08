@@ -6,6 +6,7 @@ const defaultData = {
   addItem: () => {},
   showCart: false,
   setShowCart: () => {},
+  removeItem: () => {},
 };
 
 export const CartContext = createContext(defaultData);
@@ -35,7 +36,14 @@ const CartContextProvider = ({ children }) => {
   };
 
   const removeItem = item => {
-    return item;
+    const _cart = [...cart];
+    const _cartItemFoundIndex = _cart.findIndex(
+      _cartItem => _cartItem.product.id === item.product.id
+    );
+    if (_cartItemFoundIndex !== -1) {
+      _cart.splice(_cartItemFoundIndex, 1);
+      setCart(_cart);
+    }
   };
 
   return (

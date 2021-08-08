@@ -4,12 +4,16 @@ import CartProductCounter from './CartProductCounter';
 
 const CartProductItem = props => {
   const { cartItem } = props;
-  const { addItem } = useContext(CartContext);
+  const { addItem, removeItem } = useContext(CartContext);
 
   const updateValue = val => {
-    const _updatedCartItem = cartItem;
-    _updatedCartItem.amount = val;
-    addItem(_updatedCartItem, true);
+    if (val === 0) {
+      removeItem(cartItem);
+    } else {
+      const _updatedCartItem = cartItem;
+      _updatedCartItem.amount = val;
+      addItem(_updatedCartItem, true);
+    }
   };
 
   return (
