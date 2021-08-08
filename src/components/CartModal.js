@@ -5,7 +5,7 @@ import CartFooter from './CartFooter';
 import CartHeader from './CartHeader';
 
 const CartModal = () => {
-  const { showCart, setShowCart } = useContext(CartContext);
+  const { cart, showCart, setShowCart } = useContext(CartContext);
 
   useEffect(() => {
     const cartOverlay = document.getElementById('js-cart-modal-overlay');
@@ -28,7 +28,7 @@ const CartModal = () => {
       <div className='cart-modal'>
         <CartHeader />
         <CartBody />
-        <CartFooter />
+        {cart.length > 0 && <CartFooter />}
       </div>
     </>
   );

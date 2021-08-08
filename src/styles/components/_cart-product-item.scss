@@ -23,7 +23,7 @@
   &__image {
     width: 100px;
     height: auto;
-    border: 1px solid #EEE;
+    border: 1px solid #eee;
 
     @include media.query('>=lg') {
       width: 200px;
@@ -36,36 +36,35 @@
 
     @include media.query('>=xsm') {
       font-size: 1rem;
-
     }
-    
+
     @include media.query('>=sm') {
       font-size: 1.1rem;
-
     }
 
     @include media.query('>=lg') {
       font-size: 1.2rem;
-
     }
   }
 
   &__price {
     font-size: 0.8rem;
 
+    &::selection {
+      background-color: transparent;
+      color: #101010;
+    }
+
     @include media.query('>=xsm') {
       font-size: 0.9rem;
-
     }
-    
+
     @include media.query('>=sm') {
       font-size: 1rem;
-
     }
 
     @include media.query('>=lg') {
       font-size: 1.1rem;
-
     }
   }
 }

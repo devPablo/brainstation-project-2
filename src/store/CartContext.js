@@ -17,9 +17,20 @@ const CartContextProvider = ({ children }) => {
   // Cart e.g.
   // [{ product: {}, amount: 5 }];
 
-  const addItem = item => {
+  const addItem = (item, fromCart) => {
     const _cart = [...cart];
-    _cart.push(item);
+    const _cartItemFoundIndex = _cart.findIndex(
+      _cartItem => _cartItem.product.id === item.product.id
+    );
+    if (_cartItemFoundIndex === -1) {
+      _cart.push(item);
+    } else {
+      if (fromCart) {
+        _cart[_cartItemFoundIndex].amount = item.amount;
+      } else {
+        _cart[_cartItemFoundIndex].amount += item.amount;
+      }
+    }
     setCart(_cart);
   };
 

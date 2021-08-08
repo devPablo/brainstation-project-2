@@ -3,9 +3,9 @@ import { AiOutlinePlus, AiOutlineMinus } from 'react-icons/ai';
 import IconWrapperEvent from './IconWrapperEvent';
 
 const CartProductCounter = props => {
-  const { onUpdate } = props;
+  const { onUpdate, initValue } = props;
 
-  const [productCounter, setProductCounter] = useState(1);
+  const [productCounter, setProductCounter] = useState(initValue);
 
   useEffect(() => {
     onUpdate(productCounter);
