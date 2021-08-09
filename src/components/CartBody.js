@@ -1,27 +1,10 @@
-import { useContext, useEffect, useState } from 'react';
-import ProductCounter from './ProductCounter';
+import { useContext } from 'react';
 import { CartContext } from './../store/CartContext';
 import CartProductItem from './CartProductItem';
 import { formatter } from './../utils/FormatCurrency';
 
 const CartBody = () => {
-  const { cart } = useContext(CartContext);
-  const [subTotal, setSubTotal] = useState(0);
-
-  const itemUpdateHandler = () => {
-    if (cart.length === 1) {
-      setSubTotal(cart[0].amount * cart[0].product.price);
-    } else {
-      const _subtotal = cart.reduce(calcSubTotal);
-      setSubTotal(_subtotal);
-    }
-  };
-
-  const calcSubTotal = (prev, current) => {
-    return (
-      prev.amount * prev.product.price + current.amount * current.product.price
-    );
-  };
+  const { cart, subTotal } = useContext(CartContext);
 
   return (
     <div className='cart-body'>
@@ -36,11 +19,7 @@ const CartBody = () => {
           {/* Product Item */}
           {cart.map(cartItem => {
             return (
-              <CartProductItem
-                key={cartItem.product.id}
-                cartItem={cartItem}
-                onUpdate={itemUpdateHandler}
-              />
+              <CartProductItem key={cartItem.product.id} cartItem={cartItem} />
             );
           })}
         </>
