@@ -7,19 +7,23 @@ import App from './components/App';
 import NotFound from './pages/NotFound';
 import ProductContextProvider from './store/ProductContext';
 import CartContextProvider from './store/CartContext';
+import { PayPalScriptProvider } from '@paypal/react-paypal-js';
+import { initialOptions } from './constants/PayPal';
 
 ReactDOM.render(
   <React.StrictMode>
-    <ProductContextProvider>
-      <CartContextProvider>
-        <Router>
-          <Switch>
-            <Route path='/404' component={NotFound} />
-            <Route component={App} />
-          </Switch>
-        </Router>
-      </CartContextProvider>
-    </ProductContextProvider>
+    <PayPalScriptProvider options={initialOptions}>
+      <ProductContextProvider>
+        <CartContextProvider>
+          <Router>
+            <Switch>
+              <Route path='/404' component={NotFound} />
+              <Route component={App} />
+            </Switch>
+          </Router>
+        </CartContextProvider>
+      </ProductContextProvider>
+    </PayPalScriptProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
