@@ -102,7 +102,7 @@ const CheckoutForm = props => {
               !formValid ? 'checkout-form__form-confirm-payment--disabled' : ''
             }`}
           />
-          <PayPal />
+          <PayPal onPaymentComplete={onPaymentComplete}/>
         </div>
       </form>
     </div>

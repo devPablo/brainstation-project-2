@@ -1,22 +1,21 @@
-import {
-  PayPalScriptProvider,
-  PayPalButtons,
-  FUNDING,
-} from '@paypal/react-paypal-js';
+import { PayPalButtons, FUNDING } from '@paypal/react-paypal-js';
 import { useContext } from 'react';
+import { useHistory } from 'react-router-dom';
 import { CartContext } from './../store/CartContext';
 
 const PayPal = props => {
-  const { classes } = props;
+  const { onPaymentComplete, classes } = props;
   const { subTotal } = useContext(CartContext);
+  const history = useHistory();
 
   const onApprove = (data, actions) => {
-    console.log('Payment from PayPal approved');
+    onPaymentComplete();
     return actions.order.capture();
   };
 
-  // sb-vb74747091018@personal.example.com
-  // tdd*Wj2&
+  // PayPal Sandbox
+  // Email: sb-vb74747091018@personal.example.com
+  // Password: tdd*Wj2&
 
   return (
     <PayPalButtons
