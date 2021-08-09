@@ -8,9 +8,8 @@ import ReviewOne from './../assets/background/review-1.jpg';
 import ReviewTwo from './../assets/background/review-2.jpg';
 
 const Home = () => {
-
   useEffect(() => {
-    document.title = 'Boniv — Home'
+    document.title = 'Boniv — Home';
   }, []);
 
   return (
@@ -26,8 +25,8 @@ const Home = () => {
       />
       <Review
         image={ReviewTwo}
-        content="It's simple, by far the worst products I've ever purchased in my entire life; 
-                had them thrown up in the garbage right away, no regrets."
+        content="It's simple, by far the worst products I've ever purchased.
+                I woudn't recommend it to anyone; refunding right away."
         author='Carlos'
         invert='true'
       />
