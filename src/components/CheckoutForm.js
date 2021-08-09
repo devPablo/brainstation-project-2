@@ -2,6 +2,7 @@ import CheckoutFooter from './CheckoutFooter';
 import ActionButtonEvent from './ActionButtonEvent';
 import { useContext, useEffect, useState } from 'react';
 import { CartContext } from '../store/CartContext';
+import PayPal from './PayPal';
 
 const CheckoutForm = props => {
   const { onPaymentComplete } = props;
@@ -101,6 +102,7 @@ const CheckoutForm = props => {
               !formValid ? 'checkout-form__form-confirm-payment--disabled' : ''
             }`}
           />
+          <PayPal onPaymentComplete={onPaymentComplete}/>
         </div>
       </form>
     </div>

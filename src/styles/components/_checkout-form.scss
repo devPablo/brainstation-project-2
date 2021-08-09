@@ -50,6 +50,7 @@
   &__form-confirm-payment {
     width: 100%;
     font-size: 0.7rem;
+    margin-bottom: 1rem;
 
     @include media.query('>=lg') {
       font-size: 0.8rem;
