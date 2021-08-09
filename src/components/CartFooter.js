@@ -3,10 +3,10 @@ import { CartContext } from '../store/CartContext';
 import ActionButton from './ActionButton';
 
 const CartFooter = () => {
-  const { cart } = useContext(CartContext);
+  const { cart, setShowCart } = useContext(CartContext);
 
   const show = () => {
-    console.log(cart);
+    setShowCart(false);
   };
 
   return (

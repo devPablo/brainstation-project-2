@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import CarouselSplit from '../components/CarouselSplit';
 import InstagramGallery from '../components/InstagramGallery';
 import Review from '../components/Review';
@@ -7,6 +8,11 @@ import ReviewOne from './../assets/background/review-1.jpg';
 import ReviewTwo from './../assets/background/review-2.jpg';
 
 const Home = () => {
+
+  useEffect(() => {
+    document.title = 'Boniv — Home'
+  }, []);
+
   return (
     <div className='home'>
       <SplitInfo />

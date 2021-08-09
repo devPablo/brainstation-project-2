@@ -1,4 +1,5 @@
 import { Switch, Route, Redirect } from 'react-router-dom';
+import Checkout from '../pages/Checkout';
 import ProductDetail from '../pages/ProductDetail';
 
 import Home from './../pages/Home';
@@ -11,6 +12,7 @@ const Main = () => {
         <Route path='/home' component={Home}></Route>
         <Route path='/shop/:category/:id' component={ProductDetail}></Route>
         <Route path='/shop' component={Shop}></Route>
+        <Route path='/checkout' component={Checkout}></Route>
         <Route path='/' exact>
           <Redirect to='/home' />
         </Route>

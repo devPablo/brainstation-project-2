@@ -2,28 +2,37 @@
   {
     "id": "a52b39aa-554c-40d7-980b-87788ac528da",
     "category": "boto",
-    "common": "tall ottoman",
+    "common": "short ottoman",
     "color": "honest blue",
-    "price": 95,
+    "price": 120,
     "image": "boto/BotoS_HonestBlue_01-777x777.png",
     "description": "Refined and stately, Boto is a classic ottoman that comes in two unique sizes boasting ample storage space within."
   },
   {
     "id": "a9c98ddd-d314-46f1-89aa-dbc9bf012216",
     "category": "boto",
-    "common": "tall ottoman",
+    "common": "short ottoman",
     "color": "modest grey",
-    "price": 95,
+    "price": 120,
     "image": "boto/BotoS_ModestGrey_01-777x777.png",
     "description": "Refined and stately, Boto is a classic ottoman that comes in two unique sizes boasting ample storage space within."
   },
   {
     "id": "3619afe1-d8b0-4dbd-87a9-38c36e5346d7",
     "category": "boto",
-    "common": "tall ottoman",
+    "common": "short ottoman",
     "color": "peaceful cream",
-    "price": 95,
+    "price": 120,
     "image": "boto/BotoS_PeacefulCream_01-777x777.png",
+    "description": "Refined and stately, Boto is a classic ottoman that comes in two unique sizes boasting ample storage space within."
+  },
+  {
+    "id": "f42fd377-30a8-4fb0-a70f-4bc56f6a690e",
+    "category": "boto",
+    "common": "tall ottoman",
+    "color": "loyal blue",
+    "price": 95,
+    "image": "boto/BotoT_LoyalBlue_01-777x777.png",
     "description": "Refined and stately, Boto is a classic ottoman that comes in two unique sizes boasting ample storage space within."
   },
   {
