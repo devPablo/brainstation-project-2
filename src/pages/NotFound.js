@@ -1,4 +1,11 @@
+import { useEffect } from "react";
+
 const NotFound = () => {
+
+  useEffect(() => {
+    document.title = 'Boniv — 404 Not Found'
+  }, []);
+
   return (
     <div className='notfound'>
       <div className='notfound_container'>

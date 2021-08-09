@@ -5,7 +5,14 @@ const FooterForm = () => {
 
   const localSubmitHandler = e => {
     e.preventDefault();
-    console.log('Submitted email: ' + email);
+    const data = { email: email.toLowerCase() };
+    fetch('http://localhost:5000/newsletter', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    });
     resetForm();
   };
 
