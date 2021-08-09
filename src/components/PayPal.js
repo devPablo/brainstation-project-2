@@ -9,8 +9,11 @@ const PayPal = props => {
   const history = useHistory();
 
   const onApprove = (data, actions) => {
-    onPaymentComplete();
-    return actions.order.capture();
+    const capture = actions.order.capture().then(res => {
+      const payer = res.payer;
+      const fullName = `${payer.name.given_name} ${payer.name.surname}`;
+      onPaymentComplete(fullName);
+    });
   };
 
   // PayPal Sandbox
