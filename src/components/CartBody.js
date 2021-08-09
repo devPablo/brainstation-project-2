@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from 'react';
 import ProductCounter from './ProductCounter';
 import { CartContext } from './../store/CartContext';
 import CartProductItem from './CartProductItem';
+import { formatter } from './../utils/FormatCurrency';
 
 const CartBody = () => {
   const { cart } = useContext(CartContext);
@@ -28,8 +29,8 @@ const CartBody = () => {
         <>
           <div>
             <p className='cart-body__subtotal'>
-              <span className='cart-body__subtotal-title'>Subtotal: </span>$
-              {subTotal}
+              <span className='cart-body__subtotal-title'>Subtotal: </span>
+              {formatter.format(subTotal)}
             </p>
           </div>
           {/* Product Item */}
