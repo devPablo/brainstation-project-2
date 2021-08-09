@@ -17,7 +17,7 @@ const Checkout = () => {
   };
 
   return (
-    <div className='checkout__wrapper'>
+    <div className={`checkout__wrapper ${paymentCompeted ? 'checkout__wrapper--payment-completed' : ''}`}>
       <div className='checkout'>
         {!paymentCompeted && (
           <>

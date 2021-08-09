@@ -23,5 +23,9 @@
     @include media.query('>=lg') {
       max-width: 30%;
     }
+
+    &--payment-completed {
+      height: 100vh;
+    }
   }
 }
